@@ -57,12 +57,13 @@ namespace Fabrica
         {
             int i;
             BMW bmw = new BMW();
+            Mercedes mercedes = new Mercedes();
             Console.WriteLine("Вы хотите добавить машину? \n 1. Да ");
             i = Convert.ToInt32(Console.ReadLine());
             if (i == 1)
             {
                 int j;
-                Console.WriteLine("Выберете марку машины: \n 1.BMW");
+                Console.WriteLine("Выберете марку машины: \n 1.BMW \n 2.Mercedes");
                 i = Convert.ToInt32(Console.ReadLine());
 
                 if (i == 1)
@@ -78,9 +79,12 @@ namespace Fabrica
                     else
                         Movement(bmw.createCoupe());
                 }
-
                 if (i == 2)
                     Console.WriteLine("Вы выбрали Mercedes");
+                if (j == 1)
+                    Movement(mercedes.createSedan());
+                else
+                    Movement(mercedes.createCoupe());
             }
             Menu();
 
